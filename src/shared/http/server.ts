@@ -2,7 +2,8 @@ import 'reflect-metadata'; // needs to be imported before express to work - used
 import express, { NextFunction, Request, Response } from 'express';
 import cors from 'cors';
 import routes from './routes';
-import { AppError } from './errors/AppError';
+import { AppError } from '../errors/AppError';
+import '@shared/typeorm'; //import typeorm connection. Needs to be imported after express to work
 
 const app = express(); //express instance on mais module
 
